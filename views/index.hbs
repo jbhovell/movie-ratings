@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3> Sort movies by the average rating scores</h3>
+    
+    <div class="container">
+        <form action="/ratings">
+            <label for="mt1">Movie Title 1</label>
+            <input type="text" id="mt1" name="mt1" placeholder="title..">
+            <label for="mt2">Movie Title 2</label>
+            <input type="text" id="mt2" name="mt2" placeholder="title..">
+            <label for="mt3">Movie Title 3</label>
+            <input type="text" id="mt3" name="mt3" placeholder="title..">
+            <label for="year">Year</label>
+            <select id="year" name="year">
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021" selected>2021</option>
+            </select>
+
+            <label for="comments">Comments</label>
+            <textarea id="comments" name="comments" placeholder="Write something.." style="height:200px"></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
