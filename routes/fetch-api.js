@@ -66,7 +66,7 @@ const avgRating = (d) => {
 const outputCSV = (mv) => {
     const parser = new Parser();
     const formatted = parser.parse(mv);
-    console.log(formatted)
+    return formatted
 }
 
 module.exports = { fetch, outputCSV }
