@@ -12,9 +12,8 @@ const decrypt = str => {
     const decKey = CryptoJS.enc.Base64.parse(str).toString(CryptoJS.enc.Utf8);
     return decKey
 };
-//todo
+
 //test for axios.all
-//front end, pug?  show csv result on screen, allow  search title or id, then vue or next
 
 const loadAndDecryptApiKey = () => {
     const file = fs.readFileSync('env.config', { encoding: 'utf8', flag: 'r' });
@@ -23,17 +22,12 @@ const loadAndDecryptApiKey = () => {
     var decKey = decrypt(encKey)
     return decKey
 }
-const fetch = async () => {
+const fetch = async (...mts) => {
     try {
         const apiKey = loadAndDecryptApiKey();
-        const urls = [
-            `https://www.omdbapi.com/?t=war&ApiKey=${apiKey}`,
-            `http://www.omdbapi.com/?i=tt3896198&apikey=${apiKey}`,
-            `http://www.omdbapi.com/?t=queen&y=2021&apikey=${apiKey}`
-        ]
+        const urls = mts.map(mt => `https://www.omdbapi.com/?t=${mt}&ApiKey=${apiKey}`)
 
         const allRes = await axios.all(urls.map(u => axios.get(u)));
-        console.log(allRes)
         const sortedMovies = sortByAvgRating(allRes)
         return sortedMovies
 
