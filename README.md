@@ -4,4 +4,4 @@ look better in handlerbars
 
 fix test
 
-better way to store api key, google secret manager?
+Currenlty I encrypted my api key and stored it in a config file. It was loaded and decrpyted by fetch-api.js. Perhaps try google secret manager later
