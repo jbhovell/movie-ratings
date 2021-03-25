@@ -8,8 +8,8 @@ Sort movies by the average ratings from high to low.
 
 ## todo
 
-- look better in handlerbars
+- improves handlerbars page rendering
 
-- fix test
+- fix unit tests
 
-- better way to store api key, google secret?#
+- better way to store api key, google Secret Manager?
