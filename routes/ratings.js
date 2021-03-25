@@ -6,7 +6,11 @@ const { fetch } = require('./fetch-api')
 router.get('/', async function (req, res, next) {
   const data = await fetch(req.query.mt1, req.query.mt2, req.query.mt3);
   console.log(data)
-  res.status(200).render('layout', { body: JSON.stringify(data) });
+  res.status(200).render('layout', {
+    row1: JSON.stringify(data[0]),
+    row2: JSON.stringify(data[1]),
+    row3: JSON.stringify(data[2]),
+  });
 });
 
 module.exports = router;
