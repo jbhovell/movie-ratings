@@ -2,19 +2,6 @@ const axios = require('axios')
 const fs = require('fs')
 const CryptoJS = require('crypto-js');
 
-const decryptApiKey = str => {
-    const decKey = CryptoJS.enc.Base64.parse(str).toString(CryptoJS.enc.Utf8);
-    return decKey
-};
-
-
-const loadApiKey = () => {
-    const file = fs.readFileSync('env.config', { encoding: 'utf8', flag: 'r' });
-    const configLines = file.split('\n')
-    const encKey = configLines.find(x => x.indexOf('apikey') >= 0).split(':')[1]
-    var decKey = decryptApiKey(encKey)
-    return decKey
-}
 const fetch = async (...mts) => {
     try {
         const apiKey = loadApiKey();
@@ -27,20 +14,20 @@ const fetch = async (...mts) => {
     } catch (e) {
         console.log(e.message)
     }
+};
+
+const loadApiKey = () => {
+    const file = fs.readFileSync('env.config', { encoding: 'utf8', flag: 'r' });
+    const configLines = file.split('\n')
+    const encKey = configLines.find(x => x.indexOf('apikey') >= 0).split(':')[1]
+    var decKey = decryptApiKey(encKey)
+    return decKey
 }
 
-const sortByAvgRating = (allRes) => {
-    const fullSorted = allRes.map(x => x.data).sort((a, b) => avgRating(b) - avgRating(a))
-    const filteredSorted = []
-    for (const m of fullSorted) {
-        let obj = {}
-        obj.title = m.Title;
-        obj.year = m.Year;
-        obj.rating = avgRating(m);
-        filteredSorted.push(obj);
-    }
-    return filteredSorted;
-}
+const decryptApiKey = str => {
+    const decKey = CryptoJS.enc.Base64.parse(str).toString(CryptoJS.enc.Utf8);
+    return decKey
+};
 
 const avgRating = (d) => {
     let sum = 0
@@ -56,6 +43,19 @@ const avgRating = (d) => {
         count++
     }
     return +(sum / count).toFixed(2);
-}
+};
+
+const sortByAvgRating = (allRes) => {
+    const fullSorted = allRes.map(x => x.data).sort((a, b) => avgRating(b) - avgRating(a))
+    const filteredSorted = []
+    for (const m of fullSorted) {
+        let obj = {}
+        obj.title = m.Title;
+        obj.year = m.Year;
+        obj.rating = avgRating(m);
+        filteredSorted.push(obj);
+    }
+    return filteredSorted;
+};
 
 module.exports = { fetch }
