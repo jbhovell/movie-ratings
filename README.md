@@ -8,7 +8,7 @@ Sort movies by the average ratings from high to low.
 
 ## todo
 
-- improves handlerbars page rendering
+- improves handlerbars page rendering, print to a table, add css styling
 
 - fix unit tests
 
