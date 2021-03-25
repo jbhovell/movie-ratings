@@ -44,6 +44,7 @@ const sortByAvgRating = (allRes) => {
         let obj = {}
         obj.title = m.Title
         obj.year = m.Year
+        obj.rating = avgRating()
         filteredSorted.push(obj)
     }
     return filteredSorted;
@@ -62,8 +63,7 @@ const avgRating = (d) => {
         }
         count++
     }
-    return sum / count.toFixed(2)
-
+    return sum / count.toFixed(2);
 }
 
 const outputCSV = (mv) => {
