@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const { fetch, outputCSV } = require('./fetch-api')
+const { fetch } = require('./fetch-api')
 
 /* GET movies listing. */
 router.get('/', async function (req, res, next) {
