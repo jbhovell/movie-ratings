@@ -1,6 +1,6 @@
 todo
 
-look better in Handlebars
+styling the ratings page
 
 fix test
 
