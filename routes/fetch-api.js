@@ -2,6 +2,7 @@ const axios = require('axios')
 const { Parser } = require('json2CSV')
 const fs = require('fs')
 const CryptoJS = require('crypto-js');
+const { title } = require('process');
 
 const encrypt = str => {
     const encKey = CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(str));
@@ -37,7 +38,15 @@ const fetch = async (...mts) => {
 }
 
 const sortByAvgRating = (allRes) => {
-    return allRes.map(x => x.data).sort((a, b) => avgRating(b) - avgRating(a))
+    const fullSorted = allRes.map(x => x.data).sort((a, b) => avgRating(b) - avgRating(a))
+    const filteredSorted = []
+    for (const m of fullSorted) {
+        let obj = {}
+        obj.title = m.Title
+        obj.year = m.Year
+        filteredSorted.push(obj)
+    }
+    return filteredSorted;
 }
 
 const avgRating = (d) => {
