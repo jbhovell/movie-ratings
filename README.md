@@ -1,9 +1,15 @@
-todo
+# Movie Ratings
 
-only display title and avg rating
+Use key words to search movie titles from http://img.omdbapi.com
 
-look better in handlerbars
+Calculate the average ratings of each movie's rating scores from multiple resources.
 
-fix test
+Sort movies by the average ratings from high to low.
 
-better way to store api key, google secret?
+## todo
+
+- look better in handlerbars
+
+- fix test
+
+- better way to store api key, google secret?#
