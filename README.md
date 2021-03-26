@@ -8,6 +8,6 @@ Currently, I encrypted my api key and stored it in a config file. It was loaded 
 
 deploy to heroku and aws
 
-how to scale it
+considerations for scaling
 
 
