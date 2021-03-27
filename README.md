@@ -11,3 +11,13 @@ http://localhost:3000
 ```
 
 On the home page, fill in the form with the keyword in the movie title, submit, and it will pull out the results for you.
+
+
+#### Todo
+
+deploy to heroku and aws
+
+more tests
+
+
+
