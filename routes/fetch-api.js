@@ -52,6 +52,8 @@ const sortByAvgRating = (allRes) => {
         let obj = {}
         obj.title = m.Title;
         obj.year = m.Year;
+        obj.plot = m.Plot
+        obj.lang = m.Language
         obj.rating = avgRating(m);
         filteredSorted.push(obj);
     }
