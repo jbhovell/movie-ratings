@@ -10,4 +10,4 @@ npm start
 http://localhost:3000
 ```
 
-Fill in the form with the keyword in the movie title, submit, and it will pull out the results for you.
+In the home page, fill in the form with the keyword in the movie title, submit, and it will pull out the results for you.
