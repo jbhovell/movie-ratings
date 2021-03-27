@@ -19,5 +19,6 @@ deploy to heroku and aws
 
 more tests
 
+aws gateway + lambda  for api??
 
 
