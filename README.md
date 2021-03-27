@@ -1,5 +1,5 @@
 ### Movie Ratings
-I love to watch movies, but I only want to watch those with high ratings.
+I love watching movies, but only if they are recommended by other audiences.
 
 So I wrote this little app to help me search movies and list them by average ratings from different sources.
 
