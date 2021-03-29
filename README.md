@@ -17,10 +17,9 @@ On the home page, fill in the form with the keyword in the movie title, submit, 
 
 limit the words/chars in comments
 
+subscriber don't see adverts, and more features
 
-patron/subscriber don't see adverts, with more featuress
-
-free users see adverts to films, netflix, amazon prime videot etc
+free users see adverts to films, netflix, amazon prime video etc
 
 SEO, register it on movie related websites.
 
@@ -28,6 +27,5 @@ deploy to heroku and aws
 
 shall I use better api than https://www.omdbapi.com?
 
-ec2 or aws gateway + lambda  for api??
 
 
