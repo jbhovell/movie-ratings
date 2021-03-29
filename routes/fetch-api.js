@@ -12,7 +12,8 @@ const fetch = async (...mts) => {
         return sortedMovies
 
     } catch (e) {
-        console.log(e.message)
+        console.log(e.message);
+        throw e;
     }
 };
 
