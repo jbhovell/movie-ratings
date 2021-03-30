@@ -15,6 +15,8 @@ On the home page, fill in the form with the keyword in the movie title, submit, 
 
 #### Todo
 
+user input validation ( both client and server side). 
+
 limit the words/chars in comments
 
 subscriber don't see adverts, and more features

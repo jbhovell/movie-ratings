@@ -92,17 +92,14 @@ describe('test fetch api', () => {
         Response: 'True'
     }
     //failed test
-    it.skip('should fetch', async () => {
+    it('should fetch', async () => {
         const resp = await fetch('queen', 'war', 'guardian');
-        expect(axios.all).toHaveBeenCalledTimes(1);
-        axios.get.mockImplementation((url) => {
-            if (url.includes('queen'))
-                return { data: queen };
-            if (url.includes('war'))
-                return { data: war };
-            if (url.includes('guardian'))
-                return { data: guardian };
+
+        axios.all.mockImplementation(() => {
+            return [{ data: queen }, { data: guardian }, { data: war }]
+
         });
+        expect(axios.all).toHaveBeenCalledTimes(1);
         expect(axios.get).toHaveBeenCalledTimes(3);
         expect(resp).toEqual('');
     });
@@ -115,7 +112,6 @@ describe('test fetch api', () => {
         await expect(resp).rejects.toThrowError('network error');
         expect(axios.all).toHaveBeenCalledTimes(1);
         expect(axios.get).toHaveBeenCalledTimes(3);
-        expect(resp).rejects.toEqual(error);
     });
 })
 
