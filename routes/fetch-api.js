@@ -2,13 +2,13 @@ const axios = require('axios')
 const fs = require('fs')
 const CryptoJS = require('crypto-js');
 
-const fetch = async (...mts) => {
+const fetch = async (mts, lang) => {
     try {
         const apiKey = loadApiKey();
         const urls = mts.map(mt => `https://www.omdbapi.com/?t=${mt}&ApiKey=${apiKey}`)
 
         const allRes = await axios.all(urls.map(u => axios.get(u)));
-        const sortedMovies = sortByAvgRating(allRes)
+        const sortedMovies = sortByAvgRating(allRes, lang);
         return sortedMovies
 
     } catch (e) {
@@ -46,8 +46,8 @@ const avgRating = (d) => {
     return +(sum / count).toFixed(2);
 };
 
-const sortByAvgRating = (allRes) => {
-    const fullSorted = allRes.map(x => x.data).sort((a, b) => avgRating(b) - avgRating(a))
+const sortByAvgRating = (allRes, lang) => {
+    const fullSorted = allRes.map(x => x.data).filter(x => lang === 'any' || x.Language.toLowerCase().includes(lang)).sort((a, b) => avgRating(b) - avgRating(a))
     const filteredSorted = []
     for (const m of fullSorted) {
         let obj = {}

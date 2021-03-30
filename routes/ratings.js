@@ -5,7 +5,7 @@ const fs = require('fs')
 
 /* GET movies listing. */
 router.get('/', async function (req, res, next) {
-  const data = await fetch(req.query.mt1, req.query.mt2, req.query.mt3);
+  const data = await fetch([req.query.mt1, req.query.mt2, req.query.mt3], req.query.lang);
   //save to a csv file
   const csvStr = saveToCSV(data);
   // res.status(200).render('layout', {
