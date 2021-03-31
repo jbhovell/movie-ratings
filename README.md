@@ -15,6 +15,8 @@ On the home page, fill in the form with the keyword in the movie title, submit, 
 
 #### Todo
 
+load top 3 films on iplayer, either use bbc iplayer Nitro api or web scrapping (may use existing npm package).
+
 user input validation ( both client and server side). 
 
 limit the words/chars in comments
