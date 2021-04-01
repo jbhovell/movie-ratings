@@ -42,6 +42,7 @@ const sortByAvgRating = (allRes, lang) => {
     obj.plot = m.Plot;
     obj.lang = m.Language;
     obj.rating = avgRating(m);
+    obj.duration = m.Runtime;
     filteredSorted.push(obj);
   }
   return filteredSorted;
