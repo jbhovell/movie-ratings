@@ -21,15 +21,9 @@ user input validation ( both client and server side).
 
 limit the words/chars in comments
 
-subscriber don't see adverts, and more features
+deploy
 
-free users see adverts to films, netflix, amazon prime video etc
-
-SEO, register it on movie related websites.
-
-deploy to heroku and aws
-
-shall I use better api than https://www.omdbapi.com?
+better api than https://www.omdbapi.com?
 
 
 
