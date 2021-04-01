@@ -4,6 +4,8 @@ const router = express.Router();
 const fs = require('fs');
 const { fetch } = require('./fetch-api');
 
+const OUTPUT_NAME = './ratings.csv';
+
 /* GET movies listing. */
 router.get('/', async (req, res, next) => {
   const data = await fetch([req.query.mt1, req.query.mt2, req.query.mt3], req.query.lang);
@@ -31,7 +33,7 @@ const saveFile = (data) => {
   for (const d of data) {
     csvStr += `${d.title},${d.rating},${d.lang.replace(/(,\s*)/g, '.')},${d.year},${d.plot.replace(/(,\s*)/g, '.')}\n`;
   }
-  fs.writeFileSync('./ouput.csv', csvStr);
+  fs.writeFileSync(OUTPUT_NAME, csvStr);
   return csvStr;
 };
 module.exports = router;
