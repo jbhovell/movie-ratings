@@ -10,7 +10,7 @@ const OUTPUT_NAME = './ratings.csv';
 router.get('/', async (req, res, next) => {
   const data = await fetch([req.query.mt1, req.query.mt2, req.query.mt3], req.query.lang);
   saveFile(data);
-  res.status(200).render('layout', {
+  res.status(200).render('ratings', {
     body: getRows(data),
   });
 });
@@ -18,9 +18,9 @@ router.get('/', async (req, res, next) => {
 const getRows = (data) => {
   const th = '<h1>Rate Movies</h1><tr><th>Title</th><th>Rating</th><th>Language</th><th>Duration</th><th>Year</th><th>Story</th></tr>';
   // if any title is invalid, show N/A in all the rows
-  let row1 = '<tr><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>';
-  let row2 = '<tr><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>';
-  let row3 = '<tr><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>';
+  let row1 = '<tr><td>N/A</td><td></td><td>/td><td></td><td></td><td></td></tr>';
+  let row2 = '<tr><td>N/A</td><td></td><td></td><td></td><td></td><td></td></tr>';
+  let row3 = '<tr><td>N/A</td><td></td><td></td><td></td><td></td><td></td></tr>';
   if (data && data[0]) row1 = `<tr><td>${data[0].title}</td><td>${data[0].rating}</td><td>${data[0].lang}</td><td>${data[0].duration}</td><td>${data[0].year}</td><td>${data[0].plot}</td></tr>`;
   if (data && data[1]) row2 = `<tr><td>${data[1].title}</td><td>${data[1].rating}</td><td>${data[1].lang}</td><td>${data[1].duration}</td><td>${data[1].year}</td><td>${data[1].plot}</td></tr>`;
   if (data && data[2]) row3 = `<tr><td>${data[2].title}</td><td>${data[2].rating}</td><td>${data[2].lang}</td><td>${data[2].duration}</td><td>${data[2].year}</td><td>${data[2].plot}</td></tr>`;
