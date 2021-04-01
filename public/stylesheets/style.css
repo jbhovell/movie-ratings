@@ -40,9 +40,9 @@ input[type=submit]:hover {
 }
 
 .container {
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #f2f2f2;
-  padding: 20px;
+  padding: 10px;
 }
 
 a {
