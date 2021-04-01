@@ -14,7 +14,7 @@ router.get('/', async (req, res, next) => {
 });
 
 const getRows = (data) => {
-  const th = '<h2>Show Movies by the Average Ratings</h2><tr><th>Title</th><th>Rating</th><th>Language</th><th>Year</th><th>Summary</th></tr>';
+  const th = '<h2>Rate Movies</h2><tr><th>Title</th><th>Rating</th><th>Language</th><th>Year</th><th>Summary</th></tr>';
   // if any title is invalid, show N/A in all the rows
   let row1 = '<tr><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>';
   let row2 = '<tr><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td><td>N/A</td></tr>';
