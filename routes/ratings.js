@@ -28,7 +28,7 @@ const getRows = (data) => {
 };
 
 const saveFile = (data) => {
-  let csvStr = 'Title,Rating,Lnguage,Year,Summary\n';
+  let csvStr = 'Title,Rating,Language,Year,Summary\n';
 
   for (const d of data) {
     csvStr += `${d.title},${d.rating},${d.lang.replace(/(,\s*)/g, '.')},${d.year},${d.plot.replace(/(,\s*)/g, '.')}\n`;

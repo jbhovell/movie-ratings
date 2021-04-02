@@ -10,7 +10,13 @@ const fetch = async (mts, lang) => {
     const apiKey = loadApiKey();
     const urls = mts.map((mt) => `${API_URL}?t=${mt}&apikey=${apiKey}`);
 
-    const allRes = await axios.all(urls.map((u) => axios.get(u)));
+    const allRes = await axios.all(urls.map((u) => axios.get(u,
+      {
+        header: {
+          "Content-Type": "application/json",
+          "Accept": "application/json",
+        }
+      })));
     const sortedMovies = sortByAvgRating(allRes, lang);
     return sortedMovies;
   } catch (e) {
