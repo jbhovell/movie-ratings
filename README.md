@@ -15,7 +15,19 @@ On the home page, fill in the form with the keyword in the movie title, submit, 
 
 #### Todo
 
-load top 3 films on iplayer, either use bbc iplayer Nitro api or web scrapping (may use existing npm package).
+sort by year, title, reverse sort ratings
+
+
+load top 10 films/dramas on iplayer, either use bbc iplayer Nitro api, dan's link or web scrapping (may use existing npm package).
+
+add links & thumbnails of the films/dramas on iplayer
+
+cache for iplayer, no need to call the api and recalculate for every request as the schedue don't change too frequently
+
+recently queried film can be retreived from a client AND server cache
+
+cache ratings in ram and disk (sqlite)
+timestamp for cached ratings for expiry after 1 day?
 
 user input validation ( both client and server side). 
 
