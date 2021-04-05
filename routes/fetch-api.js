@@ -2,7 +2,7 @@ const axios = require('axios');
 const fs = require('fs');
 const CryptoJS = require('crypto-js');
 
-const KEY_PATH = 'env.config';
+const KEY_PATH = '.env.config';
 const API_URL = 'https://www.omdbapi.com/';
 
 const fetch = async (mts, lang) => {

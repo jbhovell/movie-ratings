@@ -16,7 +16,7 @@ router.get('/', async (req, res, next) => {
   }
   saveFile(data);
   res.status(200).render('ratings', {
-    body: getRows(data) + getRows(iplayerData),
+    body: getRows(data),
   });
 });
 
