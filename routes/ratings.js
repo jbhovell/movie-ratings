@@ -9,9 +9,14 @@ const OUTPUT_NAME = './ratings.csv';
 /* GET movies listing. */
 router.get('/', async (req, res, next) => {
   const data = await fetch([req.query.mt1, req.query.mt2, req.query.mt3], req.query.lang);
+  let iplayerData = '';
+
+  if (req.query.iplayer) {
+    iplayerData = await fetchIPlayerData(data);
+  }
   saveFile(data);
   res.status(200).render('ratings', {
-    body: getRows(data),
+    body: getRows(data) + getRows(iplayerData),
   });
 });
 
@@ -27,6 +32,9 @@ const getRows = (data) => {
   return `${th}${row1}<br/>${row2}<br/>${row3}`;
 };
 
+const fetchIPlayerData = (data) => {
+  return data;
+}
 const saveFile = (data) => {
   let csvStr = 'Title,Rating,Language,Year,Summary\n';
 
