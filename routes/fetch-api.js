@@ -7,7 +7,7 @@ const API_URL = 'https://www.omdbapi.com/';
 
 const fetch = async (mts, lang) => {
   try {
-    const apiKey = loadApiKey();
+    const apiKey = loadApiKey()[0];
     const urls = mts.map((mt) => `${API_URL}?t=${mt}&apikey=${apiKey}`);
 
     const allRes = await axios.all(urls.map((u) => axios.get(u,
@@ -29,8 +29,9 @@ const loadApiKey = () => {
   const file = fs.readFileSync(KEY_PATH, { encoding: 'utf8', flag: 'r' });
   const configLines = file.split('\n');
   const encKey = configLines.find((x) => x.indexOf('apikey') >= 0).split(':')[1];
+  const nitroKey = configLines.find((x) => x.indexOf('nitro') >= 0).split(':')[1];
   const decKey = decryptApiKey(encKey);
-  return decKey;
+  return [decKey, nitroKey];
 };
 
 const decryptApiKey = (str) => {
