@@ -17,6 +17,9 @@ On the home page, fill in the form with the keyword in the movie title, submit, 
 
 sort by year, title, reverse sort ratings
 
+maitain a queue in memory for sending emails to users?
+
+bot as the form?
 
 load top 10 films/dramas on iplayer, either use bbc iplayer Nitro api, dan's link or web scrapping (may use existing npm package).
 
