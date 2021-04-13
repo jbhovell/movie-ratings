@@ -1,10 +1,9 @@
 ## Movie Ratings
+My current 10% time project. It is a work in progress.
 
-This is my recent 10% time project. The work is in progress.
+I like watching movies, but I don't want to waste my time watching something not good unless it is recommended.
 
-I love watching movies, but only if they are recommended by other audiences so I don't waste too much of my time.
-
-So, I wrote this little app to help me search movies I am interested in, calculate average ratings from multiple trusted sources for each of them, and list them from high to low ratings.
+So, I wrote this little app to help me search movies I am interested in, calculate average ratings from multiple trusted sources for each of them, and order them from high to low ratings.
 
 #### Run
 ```
@@ -18,7 +17,7 @@ On the home page, fill in the form with the keyword in the movie title, submit i
 
 #### Todo
 
-split frondend and backend into two components.
+split frontend and backend into two components.
 
 sort by year, title, reverse sort ratings
 
