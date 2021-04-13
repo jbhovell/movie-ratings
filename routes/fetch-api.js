@@ -5,25 +5,25 @@ const CryptoJS = require('crypto-js');
 const KEY_PATH = '.env.config';
 const API_URL = 'https://www.omdbapi.com/';
 
-let cache = {}; // limit to 20 movies, with time stamp
-let sqlClient;  // tables, today's iplayer ratings, recently searched movie ratings, timestamp
+const cache = {}; // limit to 20 movies, with time stamp
+let sqlClient; // tables, today's iplayer ratings, recently searched movie ratings, timestamp
 
 const fetch = async (mts, lang) => {
   try {
     const apiKey = loadApiKey()[0];
 
-    //TDDO: fetch from cache first
+    // TDDO: fetch from cache first
     const urls = mts.map((mt) => `${API_URL}?t=${mt}&apikey=${apiKey}`);
 
     const allRes = await axios.all(urls.map((u) => axios.get(u,
       {
         header: {
-          "Content-Type": "application/json",
-          "Accept": "application/json",
-        }
+          'Content-Type': 'application/json',
+          Accept: 'application/json',
+        },
       })));
 
-    //write new values to cache
+    // write new values to cache
     const sortedMovies = sortByAvgRating(allRes, lang);
     return sortedMovies;
   } catch (e) {

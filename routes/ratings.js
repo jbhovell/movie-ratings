@@ -32,9 +32,7 @@ const getRows = (data) => {
   return `${th}${row1}<br/>${row2}<br/>${row3}`;
 };
 
-const fetchIPlayerData = (data) => {
-  return {};
-}
+const fetchIPlayerData = (data) => ({});
 const saveFile = (data) => {
   let csvStr = 'Title,Rating,Language,Year,Summary\n';
 
