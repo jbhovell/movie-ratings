@@ -18,6 +18,8 @@ On the home page, fill in the form with the keyword in the movie title, submit i
 
 #### Todo
 
+split frondend and backend into two components.
+
 sort by year, title, reverse sort ratings
 
 load top 5 films/dramas currently on iPlayer, from a report in the S3 bucket.
