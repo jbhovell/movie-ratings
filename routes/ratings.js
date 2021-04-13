@@ -33,7 +33,7 @@ const getRows = (data) => {
 };
 
 const fetchIPlayerData = (data) => {
-  return data;
+  return {};
 }
 const saveFile = (data) => {
   let csvStr = 'Title,Rating,Language,Year,Summary\n';
