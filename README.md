@@ -6,6 +6,10 @@ I like watching movies, but I don't want to waste my time watching something not
 
 So, I wrote this little app to help me search movies I am interested in, calculate average ratings from multiple trusted sources for each of them, and order them from high to low ratings.
 
+#### Architecture
+
+<img src="public/movie.png">
+
 #### Run
 ```
 npm i
