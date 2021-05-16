@@ -1,5 +1,5 @@
 ## Movie Ratings
-My current 10% time project. I have demoed it on the Media Services' innovation day in April.
+My 10% time project. I have demoed it on the Media Services' innovation day in April.
 
 #### Context
 I like watching movies, but I don't want to waste my time watching something not good unless it is recommended.
