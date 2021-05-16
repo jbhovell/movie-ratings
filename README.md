@@ -18,20 +18,20 @@ On the home page, fill in the form with the keyword in the movie title, submit i
 
 #### Todo list for future
 
-split frontend and backend into two components.
+- [ ] split frontend and backend into two components.
 
-sort by year, title, reverse sort ratings
+- [ ] sort by year, title, reverse sort ratings
 
-load top 5 films/dramas currently on iPlayer, from a report in the S3 bucket.
+- [ ] load top 5 films/dramas currently on iPlayer, from a report in the S3 bucket.
 
-cache for iPlayer, no need to call the API and recalculate for every request as the schedules don't change frequently.
+- [ ] cache for iPlayer, no need to call the API and recalculate for every request as the schedules don't change frequently.
 
-recently queried films can be retrieved from a server-side cache
+- [ ] recently queried films can be retrieved from a server-side cache
 
-iPlayer Poller Lambda function,  run once a day, queries APPW/IBL, compute ratings, save the report in an S3 bucket.
+- [ ] iPlayer Poller Lambda function,  run once a day, queries APPW/IBL, compute ratings, save the report in an S3 bucket.
 
-Messenger, Lambda function, triggered by S3 upload and send iPlayer ratings to users by emails once a day.
+- [ ] Messenger, Lambda function, triggered by S3 upload and send iPlayer ratings to users by emails once a day.
 
-user input validation ( both client and server-side). 
+- [ ] user input validation ( both client and server-side). 
 
-limit the words/chars in comments.
+- [ ] limit the words/chars in comments.
