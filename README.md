@@ -15,6 +15,9 @@ http://localhost:3000
 
 On the home page, fill in the form with the keyword in the movie title, submit it, and it will pull out the results for you.
 
+<img src="public/form.png">
+
+<img src="public/result.png">
 
 #### Todo list for future
 
