@@ -16,7 +16,7 @@ http://localhost:3000
 On the home page, fill in the form with the keyword in the movie title, submit it, and it will pull out the results for you.
 
 
-#### Todo
+#### Todo list for future
 
 split frontend and backend into two components.
 
