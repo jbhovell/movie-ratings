@@ -4,7 +4,7 @@ My 10% time project. I have demoed it on the Media Services' innovation day in A
 #### Context
 I like watching movies, but I don't want to waste my time watching something not good unless it is recommended.
 
-So, I wrote this little app to help me search movies I am interested in, calculate average ratings from multiple trusted sources for each of them, and order them from high to low ratings.
+So, I wrote this app to help me search movies I am interested in, calculate average ratings from multiple trusted sources for each of them, and order them from high to low ratings.
 
 #### Architecture
 
