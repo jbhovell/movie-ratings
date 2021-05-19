@@ -1,6 +1,9 @@
 ## Movie Ratings
 My 10% time project. I have demoed it on the Media Services' innovation day in April.
 
+I used Node.js for the backend and Handlebars for the frontend.
+
+
 #### Context
 I like watching movies, but I don't want to waste my time watching something not good unless it is recommended.
 
