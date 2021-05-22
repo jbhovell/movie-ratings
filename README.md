@@ -26,7 +26,7 @@ On the home page, fill in the form with the keyword in the movie title, submit i
 
 <img src="public/result.png">
 
-### Todo list for future
+### To do
 
 - [ ] split frontend and backend into two components.
 
