@@ -1,4 +1,4 @@
-## Movie Ratings
+# Movie Ratings
 My 10% time project. I have demoed it on the Media Services' innovation day in April.
 
 I used Node.js and Express for the backend, Handlebars for the frontend.
